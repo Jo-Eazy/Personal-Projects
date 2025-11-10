@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <link rel="stylesheet" href="Exercise 4.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="google-form-container">
+        <div class="form-header">
+            <h1><b>Counterfeit</b> Google Form</h1>
+            <p>Fill in your information</p>
+        </div>
+        <form action="/submit_feedback" method="post" class="google-form" id="feedbackForm" novalidate>
+            <div class="form-group">
+                <label for="first_name"> Enter thy First Name:</label><br>
+                <input type="text" id="first_name" name="first_name" required><br><br>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Insert thy Last Name:</label><br>
+                <input type="text" id="last_name" name="last_name" required><br><br>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">What is your Gender:</label><br><br>
+                <div class="radio-options">
+                    <div class="radio-option">
+                        <label for="male">Male A.K.A. A Pole</label><br><br>
+                        <input type="radio" id="male" name="gender" value="Male" required><br><br>
+                    </div>
+                    <div class="radio-option">
+                        <label for="female">Female A.K.A. A Hole</label><br><br>
+                        <input type="radio" id="female" name="gender" value="Female" required><br><br>
+                    </div>
+                    <div class="radio-option">
+                        <label for="other">Other A.K.A. You decide ;)</label><br><br>
+                        <input type="radio" id="other" name="gender" value="Other" required><br><br>
+                    </div>
+                </div>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="date_of_birth">Date of Birth:</label><br>
+                <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Rate your experience:</label><br>
+                <select id="rating" name="rating" required>
+                    <option value="">Select an option</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select><br><br>
+                <div class="error-message"></div>
+            </div>
+
+            <div class="form-group conditional-group" id="satisfaction-group" style="display: none;">
+                <label for="satisfaction-details">Can you tell us more about your experience?</label>
+                <textarea id="satisfaction-details" name="satisfaction-details" rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div class="form-action-buttons">
+                <button type="submit" class="submit-button">Submit to me your feedback</button><br><br>
+            </div>
+        </form>
+
+        <form action="/search" method="get" class="google-form search-form">
+            <div class="form-group search-group">
+                <label for="search-input">Search:</label>
+                <input type="search" id="search-input" name="q" placeholder="Seek and you shall find...">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="Exercise 4.js"></script>
+</body>
+</html>
+
